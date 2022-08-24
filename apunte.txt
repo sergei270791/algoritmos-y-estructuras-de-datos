@@ -1,0 +1,21 @@
+for (indice = inicio; indice->getEnlace() != NULL ; indice = indice->getEnlace()) {
+			if (indice->getYear()>=indice->getEnlace()->getYear()) {
+                if (indice->getMonth()>=indice->getEnlace()->getMonth()){
+                    if(indice->getDay()>indice->getEnlace()->getDay()){
+                        aux1 = indice->getDato();
+                        aux2 = indice->getDay();
+                        aux3 = indice->getMonth();
+                        aux4 = indice->getYear();
+                        indice->setDato(indice->getEnlace()->getDato());
+                        indice->setDay(indice->getEnlace()->getDay());
+                        indice->setMonth(indice->getEnlace()->getMonth());
+                        indice->setYear(indice->getEnlace()->getYear());
+                        indice->getEnlace()->setDato(aux1);
+                        indice->getEnlace()->setDay(aux2);
+                        indice->getEnlace()->setMonth(aux3);
+                        indice->getEnlace()->setYear(aux4);
+                    }
+                }
+				
+			}
+		}
